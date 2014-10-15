@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 public class MyFragment extends ListFragment{
 
 	public onCreateView(LayoutInflater inflator, ViewGroup container, Bundle savedInstanceState){
-		
+		yadadada
 		
 	}
 	
