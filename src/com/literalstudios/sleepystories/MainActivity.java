@@ -12,6 +12,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // creates a reference to the my_fragment fragment
+        MyFragment frag = new MyFragment();
+        
+        // adds the fragments to this activity
+        getFragmentManager().beginTransaction()
+        	.add(R.id.myFrame, frag)
+        	.commit();
     }
 
 
