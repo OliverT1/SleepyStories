@@ -11,7 +11,7 @@ public class StoryData {
 	
 	//populates the arraylist with the stories from the database
 	public StoryData(){
-		
+		storiesList.add(new Story("The little Mermaid", "Hans Christian Andersen", "little_mermaid.txt", "Fairy Tale"));
 	}
 	
 }
