@@ -1,5 +1,15 @@
 package com.literalstudios.sleepystories;
 
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
 
 public class StoryArrayAdapter extends ArrayAdapter<Story>{
 	
@@ -17,15 +27,17 @@ public class StoryArrayAdapter extends ArrayAdapter<Story>{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		Story story = objects.get(position);
 		
-		LayoutInflater inflater = 
-				(LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-		//TODO change to story list item View view = inflater.inflate(R.layout.flower_listitem, null);
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+		//inflate the list activity
+		View view = inflater.inflate(R.layout.story_list_item, null);
 		
-		//TODO change ImageView image = (ImageView) view.findViewById(R.id.ivFlowerImage);
-		image.setImageResource(story.getTextFile());
-		
-		TextView tv = (TextView) view.findViewById(R.id.tvFlowerName);
-		tv.setText(story.getTitle());
+		//instantiate the text views
+		TextView authorTV = (TextView) view.findViewById(R.id.authorTextView);
+		TextView titleTV = (TextView) view.findViewById(R.id.titleTextView);
+		//TODO add genre TextView storyTV = (TextView) view.findViewById(R.id.storyTextView);
+	
+		authorTV.setText("By " + story.getAuthor());
+		titleTV.setText(story.getTitle());
 		
 		return view;
 	}

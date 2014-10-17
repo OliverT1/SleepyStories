@@ -1,6 +1,7 @@
 package com.literalstudios.sleepystories;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,7 +38,19 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
-            return true;
+            
+        	ScreenUtility utility = new ScreenUtility(this);
+        	String output = "Width: " + utility.getWidth() + ", "
+        			+ "Height: " + utility.getHeight();
+        	
+        	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        	
+        	builder.setMessage(output)
+        			.setTitle("Dimensions")
+        			.create()
+        			.show();
+        	
+        	return true;
         }
         return super.onOptionsItemSelected(item);
     }
