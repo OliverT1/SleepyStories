@@ -12,7 +12,7 @@ public class Story {
 	public static final String GENRE = "genre";
 	public static final String TEXT_FILE = "textFile";
 
-	//private fields
+	//private field
 	private String title;
 	private String author;
 	private String genre;

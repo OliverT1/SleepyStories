@@ -5,7 +5,7 @@ public class StoryArrayAdapter extends ArrayAdapter<Story>{
 	
 	private Context context;
 	private List<Story> objects;
-	sdsd;
+	
 	
 	public StoryArrayAdapter(Context context, int resource, List<Story> objects) {
 		super(context, resource, objects);
