@@ -8,13 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MyFragment extends ListFragment{
+public class StoryListFragment extends ListFragment{
 	
 	//gets story list
 	List<Story> stories = new StoryData().getStories();
 	
 	//empty constructor must be created for all fragments
-	public MyFragment(){}
+	public StoryListFragment(){}
 	public void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class MyFragment extends ListFragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		
 		// inflates the view of the fragment
-		View rootView = inflater.inflate(R.layout.my_fragment, container, false);
+		View rootView = inflater.inflate(R.layout.story_list_fragment, container, false);
 		return rootView;
 	}
 	

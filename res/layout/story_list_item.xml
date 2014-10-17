@@ -10,15 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Placeholder title"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
     
     <TextView
         android:id="@+id/authorTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/titleTextView"
-        android:text="Placeholder author" 
-        />
+        android:layout_centerHorizontal="true"
+        android:text="Placeholder author"
+        android:textSize="15sp" />
 
 </RelativeLayout>
